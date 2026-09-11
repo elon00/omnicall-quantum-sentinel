@@ -15,6 +15,7 @@
     "test:nist": "npx tsx tests/nist-pqc.test.ts",
     "test:calle": "npx tsx tests/calle.test.ts",
     "audit:crypto": "node scripts/audit-crypto.mjs",
+    "reality:all": "npx tsx scripts/reality-universal.ts",
     "reality:universal": "npx tsx scripts/reality-universal.ts",
     "reality:external": "npx tsx scripts/reality-external-gate.ts",
     "reality:certify": "npx tsx scripts/generate-urs-certificate.ts"

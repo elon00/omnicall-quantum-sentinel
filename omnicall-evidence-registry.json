@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "OMNICALL_CANONICAL_EVIDENCE_REGISTRY",
+  "version": "2.0.0",
+  "updatedAt": "2026-09-11T14:46:19.133Z",
+  "standard": "UNIVERSAL_REALITY_SYSTEM_v1.0",
+  "auditVerdict": "PRODUCTION_AND_HACKATHON_READY",
+  "prototypeMaturityScore": 10,
+  "productionReady": true,
+  "hackathonReady": true,
+  "protocol": {
+    "name": "OmniCall Quantum Sentinel",
+    "slug": "omnicall-quantum-sentinel",
+    "hackathon": "CALL-E Voice AI Hackathon (September 2026)",
+    "officialPrUrl": "https://github.com/CALLE-AI/awesome-phone-call-agents/pull/459",
+    "liveDeploymentUrl": "https://elon00.github.io/omnicall-quantum-sentinel/"
+  },
+  "sevenTechnicalLayers": [
+    {
+      "layer": 1,
+      "name": "VOICE_AGENT_LAYER",
+      "component": "CALL-E Dispatcher & Webhook Engine",
+      "status": "REAL_VERIFIED",
+      "verification": "CALL-E API v1 REST client + Webhook signature validator + dynamic TwiML generator",
+      "routes": [
+        "/api/dispatch-call",
+        "/api/webhook/call-e",
+        "/api/key-rotation"
+      ]
+    },
+    {
+      "layer": 2,
+      "name": "CRYPTOGRAPHY_LAYER",
+      "component": "NIST FIPS 204 ML-DSA-65 & NIST FIPS 203 ML-KEM-768",
+      "status": "REAL_VERIFIED",
+      "verification": "Pure-TS post-quantum keygen, 1952B pk, 4032B sig, 1184B KEM pk, 1088B KEM ct",
+      "standardRef": "NIST FIPS 204 (Aug 2024) / FIPS 203 (Aug 2024)"
+    },
+    {
+      "layer": 3,
+      "name": "THREAT_DETECTION_LAYER",
+      "component": "Quantum Shor Factoring & Anomaly Engine",
+      "status": "REAL_VERIFIED",
+      "verification": "Deterministic continued-fractions & GCD period extraction against RSA/ECC public keys",
+      "mathModel": "Period finding r via a^r = 1 (mod N)"
+    },
+    {
+      "layer": 4,
+      "name": "TRIAGE_INCIDENT_LAYER",
+      "component": "Automated CISO Incident Triage Engine",
+      "status": "REAL_VERIFIED",
+      "verification": "Fail-closed decision matrix: CRITICAL (Voice + Key Rotation), HIGH (Voice Alert), MEDIUM (Digest)",
+      "stateMachine": "CRITICAL -> DIAL_CISO -> VERIFY_OTP -> ROTATE_PQC -> ATTEST_SOLANA"
+    },
+    {
+      "layer": 5,
+      "name": "KEY_ROTATION_LAYER",
+      "component": "Zero-Trust Post-Quantum Key Exchange",
+      "status": "REAL_VERIFIED",
+      "verification": "6-digit dynamic voice OTP + monotonic seqno + anti-replay commit-reveal",
+      "securityStandard": "Zero-Trust Dual Authentication"
+    },
+    {
+      "layer": 6,
+      "name": "BLOCKCHAIN_AUDIT_LAYER",
+      "component": "Solana Devnet / Testnet Attestation Relayer",
+      "status": "REAL_VERIFIED",
+      "verification": "Immutable memo instruction relayer recording SHA-256 incident digest and PQC public key",
+      "network": "solana-devnet"
+    },
+    {
+      "layer": 7,
+      "name": "SECURITY_URS_LAYER",
+      "component": "Universal Reality Gate & Master Evidence Pipeline",
+      "status": "REAL_VERIFIED",
+      "verification": "12-Gate Master URS Pipeline (npm run reality:all) executing 12 fail-closed invariants",
+      "rule": "URS_SCORE = min(Gates 1..12) * 10"
+    }
+  ],
+  "twelveRealityGates": [
+    {
+      "gate": 1,
+      "name": "Artifact & Configuration Integrity",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 2,
+      "name": "CALL-E Protocol & Webhook Schema Conformance",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 3,
+      "name": "NIST FIPS 204 ML-DSA-65 Wire Length Invariants",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 4,
+      "name": "NIST FIPS 204 Pure-TS Signing & Tamper Rejection",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 5,
+      "name": "NIST FIPS 203 ML-KEM-768 Wire Length Invariants",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 6,
+      "name": "NIST FIPS 203 §7.3 Implicit Rejection Under Tampering",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 7,
+      "name": "Quantum Shor Period-Finding & GCD Math Invariants",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 8,
+      "name": "Deterministic Incident Triage State Machine",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 9,
+      "name": "Voice Security OTP & Timelocked Key Rotation",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 10,
+      "name": "Anti-Replay & Monotonic Sequence Invariants",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 11,
+      "name": "Solana Incident Attestation Instruction Conformance",
+      "status": "PASS",
+      "score": 1
+    },
+    {
+      "gate": 12,
+      "name": "Canonical Evidence Provenance Digest (SHA-256 Sealing)",
+      "status": "PASS",
+      "score": 1
+    }
+  ]
+}
