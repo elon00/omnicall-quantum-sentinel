@@ -1,81 +1,40 @@
 {
   "protocol": "omnicall-quantum-sentinel",
   "system": "OMNICALL-QUANTUM-SENTINEL",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "standard": "UNIVERSAL_REALITY_SYSTEM_v1.0",
   "law": "URS_SCORE = min(Gates 1..12) * 10",
   "criticalFailureRule": "Any Critical Failure = 0 => Feature Cannot Be Called Production-Ready",
   "status": "PRODUCTION_AND_HACKATHON_READY",
   "prototypeMaturityScore": 10,
-  "productionReady": true,
-  "hackathonReady": true,
-  "verdict": "FULL 7-LAYER PRODUCTION ARCHITECTURE + 12 URS REALITY GATES + NIST FIPS 203/204 VERIFIED + CALL-E VOICE AGENT DISPATCH PROVEN",
+  "engineeringRealityScore": 10,
+  "productionReady": false,
+  "certificationStatus": "NOT_CERTIFIED",
+  "marketReady": false,
+  "verdict": "FULL 7-LAYER ENGINEERING ARCHITECTURE + 12 URS INTERNAL GATES VERIFIED; EXTERNAL PRODUCTION CERTIFICATION PENDING",
+  "truthBoundary": {
+    "repositoryEngineering": "VERIFIED",
+    "externalTelecom": "REQUIRES_REAL_PROVIDER_CREDENTIALS_AND_DEPLOYED_WEBHOOK_TEST",
+    "solanaLiveAttestation": "REQUIRES_DEPLOYED_RELAYER_AND_VERIFIABLE_TRANSACTION",
+    "independentSecurityAudit": "REQUIRED",
+    "marketReadiness": "REQUIRES_REAL_USER_AND_SUSTAINED_OPERATIONAL_EVIDENCE"
+  },
   "subsystems": [
-    {
-      "layer": 1,
-      "name": "VOICE_AGENT_LAYER",
-      "description": "CALL-E API v1 REST client, Webhook signature verification, and dynamic audio dispatch",
-      "classification": "REAL_VERIFIED",
-      "realityScore": 1
-    },
-    {
-      "layer": 2,
-      "name": "CRYPTOGRAPHY_LAYER",
-      "description": "NIST FIPS 204 ML-DSA-65 and FIPS 203 ML-KEM-768 lattice post-quantum primitives",
-      "classification": "REAL_VERIFIED",
-      "realityScore": 1
-    },
-    {
-      "layer": 3,
-      "name": "THREAT_DETECTION_LAYER",
-      "description": "Quantum Shor factoring simulation & continued-fractions modular order-finding",
-      "classification": "REAL_VERIFIED",
-      "realityScore": 1
-    },
-    {
-      "layer": 4,
-      "name": "TRIAGE_INCIDENT_LAYER",
-      "description": "Fail-closed automated emergency triage state machine and threat classification",
-      "classification": "REAL_VERIFIED",
-      "realityScore": 1
-    },
-    {
-      "layer": 5,
-      "name": "KEY_ROTATION_LAYER",
-      "description": "Zero-Trust dual-authentication key rotation with 6-digit voice OTP & monotonic seqno",
-      "classification": "REAL_VERIFIED",
-      "realityScore": 1
-    },
-    {
-      "layer": 6,
-      "name": "BLOCKCHAIN_AUDIT_LAYER",
-      "description": "Solana Devnet incident attestation and immutable SHA-256 state log relayer",
-      "classification": "REAL_VERIFIED",
-      "realityScore": 1
-    },
-    {
-      "layer": 7,
-      "name": "SECURITY_URS_LAYER",
-      "description": "12-Gate Universal Reality System master verification pipeline with fail-closed invariants",
-      "classification": "REAL_VERIFIED",
-      "realityScore": 1
-    }
+    {"layer":1,"name":"VOICE_AGENT_LAYER","description":"CALL-E API v1 REST client, Webhook signature verification, and dynamic audio dispatch","classification":"REAL_VERIFIED","realityScore":1},
+    {"layer":2,"name":"CRYPTOGRAPHY_LAYER","description":"NIST FIPS 204 ML-DSA-65 and FIPS 203 ML-KEM-768 lattice post-quantum primitives","classification":"REAL_VERIFIED","realityScore":1},
+    {"layer":3,"name":"THREAT_DETECTION_LAYER","description":"Quantum Shor factoring simulation & continued-fractions modular order-finding","classification":"REAL_VERIFIED","realityScore":1},
+    {"layer":4,"name":"TRIAGE_INCIDENT_LAYER","description":"Fail-closed automated emergency triage state machine and threat classification","classification":"REAL_VERIFIED","realityScore":1},
+    {"layer":5,"name":"KEY_ROTATION_LAYER","description":"Zero-Trust dual-authentication key rotation with 6-digit voice OTP & monotonic seqno","classification":"REAL_VERIFIED","realityScore":1},
+    {"layer":6,"name":"BLOCKCHAIN_AUDIT_LAYER","description":"Solana Devnet incident attestation and immutable SHA-256 state log relayer","classification":"REAL_VERIFIED","realityScore":1},
+    {"layer":7,"name":"SECURITY_URS_LAYER","description":"12-Gate Universal Reality System master verification pipeline with fail-closed invariants","classification":"REAL_VERIFIED","realityScore":1}
   ],
   "verificationGates": {
-    "Gate1_ArtifactIntegrity": 1,
-    "Gate2_CalleProtocol": 1,
-    "Gate3_Fips204WireLengths": 1,
-    "Gate4_Fips204TamperRejection": 1,
-    "Gate5_Fips203WireLengths": 1,
-    "Gate6_Fips203ImplicitRejection": 1,
-    "Gate7_QuantumShorMath": 1,
-    "Gate8_TriageStateMachine": 1,
-    "Gate9_VoiceOtpRotation": 1,
-    "Gate10_AntiReplaySeqno": 1,
-    "Gate11_SolanaAttestation": 1,
-    "Gate12_EvidenceDigestSealing": 1
+    "Gate1_ArtifactIntegrity":1,"Gate2_CalleProtocol":1,"Gate3_Fips204WireLengths":1,"Gate4_Fips204TamperRejection":1,
+    "Gate5_Fips203WireLengths":1,"Gate6_Fips203ImplicitRejection":1,"Gate7_QuantumShorMath":1,"Gate8_TriageStateMachine":1,
+    "Gate9_VoiceOtpRotation":1,"Gate10_AntiReplaySeqno":1,"Gate11_SolanaAttestation":1,"Gate12_EvidenceDigestSealing":1
   },
   "automatedInternalScore": 10,
   "weakestLinkScore": 1,
-  "note": "All 7 layers and 12 gates verified fail-closed via automated test execution and canonical evidence registry."
+  "certificationChecklist": "docs/PRODUCTION_CERTIFICATION_CHECKLIST.md",
+  "note": "All 7 layers and 12 internal gates are verified by automated tests. External production certification remains fail-closed until independent evidence is supplied."
 }
