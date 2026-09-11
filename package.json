@@ -1,0 +1,53 @@
+{
+  "name": "omnicall-quantum-sentinel",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Autonomous Voice Incident Responder & Post-Quantum Phone Dispatcher powered by CALL-E and NIST FIPS 203/204",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "start": "node dist/server.cjs",
+    "preview": "vite preview",
+    "clean": "rm -rf dist server.js",
+    "lint": "tsc --noEmit",
+    "test": "npx tsx tests/nist-pqc.test.ts && npx tsx tests/calle.test.ts",
+    "test:nist": "npx tsx tests/nist-pqc.test.ts",
+    "test:calle": "npx tsx tests/calle.test.ts",
+    "audit:crypto": "node scripts/audit-crypto.mjs",
+    "reality:universal": "npx tsx scripts/reality-universal.ts",
+    "reality:external": "npx tsx scripts/reality-external-gate.ts",
+    "reality:certify": "npx tsx scripts/generate-urs-certificate.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@noble/ciphers": "^1.2.1",
+    "@noble/curves": "^1.8.0",
+    "@noble/hashes": "^1.7.1",
+    "@noble/post-quantum": "^0.7.1",
+    "@solana/web3.js": "^1.98.4",
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/d3": "^7.4.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "bs58": "^6.0.0",
+    "canvas-confetti": "^1.9.4",
+    "d3": "^7.9.0",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2"
+  }
+}

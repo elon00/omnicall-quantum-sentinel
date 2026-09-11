@@ -1,0 +1,54 @@
+{
+  "protocol": "omniver-quantum-decoder",
+  "system": "OMNIVERSE-QUANTUM-DECODER",
+  "version": "1.0.0",
+  "standard": "UNIVERSAL_REALITY_SYSTEM_v1.0",
+  "law": "URS_10 = min(E, I, O, V, R, C, P, F, A, H) * 10",
+  "criticalFailureRule": "Any Critical Failure = 0 => Feature Cannot Be Called Production-Ready",
+  "status": "INTERNAL_VERIFICATION_PASS_EXTERNAL_CERTIFICATION_PENDING",
+  "subsystems": [
+    {
+      "name": "OMNIVERSE_QUANTUM_DECODER_CORE",
+      "status": "INTERNAL_TEST_VERIFIED",
+      "realityScore": 0.9
+    },
+    {
+      "name": "PQC_LATTICE_DEFENSE",
+      "status": "INTERNAL_TEST_VERIFIED",
+      "realityScore": 0.9
+    },
+    {
+      "name": "SOLANA_BITCOIN_POST_QUANTUM_ARENA",
+      "status": "IMPLEMENTATION_AND_TEST_VERIFIED",
+      "realityScore": 0.8
+    },
+    {
+      "name": "CLI_OMNIVERSE_DECODER",
+      "status": "INTEGRATION_PATH_VERIFIED",
+      "realityScore": 0.8
+    },
+    {
+      "name": "HARDCORE_PQC_INTERACTIVE_CONSOLE",
+      "status": "INTERNAL_TEST_VERIFIED",
+      "realityScore": 0.9
+    }
+  ],
+  "verificationGates": {
+    "E_ExecutionReality": 0.9,
+    "I_InputReality": 0.9,
+    "O_OutputImpact": 0.8,
+    "V_IndependentVerification": 0.4,
+    "R_Reproducibility": 0.9,
+    "C_ClaimHonesty": 0.9,
+    "P_Provenance": 0.8,
+    "F_FailClosedSafety": 0.9,
+    "A_AdversarialSecurity": 0.8,
+    "H_HumanExternalAudit": 0.2
+  },
+  "automatedInternalScore": 8.0,
+  "weakestLinkScore": 2.0,
+  "weakestLinkDimension": "H_HumanExternalAudit",
+  "productionReady": false,
+  "marketReady": false,
+  "note": "Internal automated verification is strong, but external production and market certification require independent security review, deployment evidence, operational evidence, real-user evidence, and accountable human sign-off."
+}
