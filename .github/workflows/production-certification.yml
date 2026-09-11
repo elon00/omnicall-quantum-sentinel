@@ -1,0 +1,39 @@
+name: Production Certification (Manual)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  certification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact release candidate
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Verify engineering gates
+        run: npm run reality:all
+
+      - name: Verify production evidence boundary
+        env:
+          OMNICALL_EXTERNAL_EVIDENCE_ACK: ${{ secrets.OMNICALL_EXTERNAL_EVIDENCE_ACK }}
+        run: npm run reality:production
+
+      - name: Record certification candidate
+        run: |
+          echo "Commit: $(git rev-parse HEAD)"
+          echo "Production certification gate completed."
+          echo "External telecom, live Solana, operational and independent-audit evidence must be retained with the release record."
