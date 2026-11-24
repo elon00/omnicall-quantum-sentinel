@@ -18,7 +18,6 @@
     "reality:all": "npx tsx scripts/reality-universal.ts",
     "reality:universal": "npx tsx scripts/reality-universal.ts",
     "reality:external": "npx tsx scripts/reality-external-gate.ts",
-    "reality:production": "node scripts/production-certification-gate.mjs",
     "reality:certify": "npx tsx scripts/generate-urs-certificate.ts"
   },
   "dependencies": {
